@@ -9,7 +9,7 @@ int main() {
     char estado1;
     char codigo_carta1 [4];
     char nome_cidade1 [50];
-    int populacao1;
+    unsigned long int populacao1;
     float area1;
     float pib1;
     int pontos_turisticos1;
@@ -19,7 +19,7 @@ int main() {
     char estado2;
     char codigo_carta2 [4];
     char nome_cidade2 [50];
-    int populacao2;
+    unsigned long int populacao2;
     float area2;
     float pib2;
     int pontos_turisticos2;
@@ -28,7 +28,8 @@ int main() {
 
   // Área para entrada de dados
 
-    pritnf("******* Carta 1 *******");
+    printf("******* Carta 1 ******* \n");
+
     printf("Digite o estado entre A e H da primeira carta:\n");
     scanf(" %c", &estado1);
 
@@ -51,7 +52,7 @@ int main() {
     scanf("%d", &pontos_turisticos1);
 
 
-    pritnf("******* Carta 2 *******");
+    printf("******* Carta 2 ******* \n");
 
     printf("Digite o estado entre A e H da segunda carta:\n");
     scanf(" %c", &estado2);
@@ -104,6 +105,25 @@ int main() {
     printf("Pontos Turisticos: %d \n", pontos_turisticos2);
     printf("Densidade populacional: %.2f \n", densidade_populacional2);
     printf("PIB per capita: %.2f \n", pib_per_capita2);
+
+
+    // Calculando o Super Poder
+
+    long double poder1 = (double) populacao1 + area1 + pib1 + pontos_turisticos1 + pib_per_capita1 + (1 / densidade_populacional1);
+    long double poder2 = (double) populacao2+ area2 + pib2 + pontos_turisticos2 + pib_per_capita1 + (1 / densidade_populacional2) ;
+
+    // Calculado Resultado do jogo
+    int resultado = poder1 > poder2;
+    // Exibindo Resultados do Jogo
+
+    printf("******* Comparação de Cartas*******\n");
+    printf("População da carta 1 é maior que a carta 2? %d \n", populacao1 > populacao2);
+    printf("Área da carta 1 é maior que a cara 2? %d \n", area1 > area2);
+    printf("PIB da carta 1 é maior que a carta 2? %d \n", pib1 > pib2);
+    printf("Densidade Populacional da carta 1 é melhor que a carta 2 %d \n", densidade_populacional1 < densidade_populacional2);
+    printf("PIB per capita da carta 1 é maior que a carta 2? %d \n", pib_per_capita1 > pib_per_capita2);
+    printf("Resultado Final a carta 1 venceu a carta 2? %d \n", resultado);
+
 
 
 return 0;
