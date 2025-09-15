@@ -27,6 +27,8 @@ int main() {
     float pib_per_capita2;
 
   // Área para entrada de dados
+
+    pritnf("******* Carta 1 *******");
     printf("Digite o estado entre A e H da primeira carta:\n");
     scanf(" %c", &estado1);
 
@@ -47,6 +49,9 @@ int main() {
 
     printf("Digite a quantidade de pontos turisticos da cidade da primeira carta:\n");
     scanf("%d", &pontos_turisticos1);
+
+
+    pritnf("******* Carta 2 *******");
 
     printf("Digite o estado entre A e H da segunda carta:\n");
     scanf(" %c", &estado2);
