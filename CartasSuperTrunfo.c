@@ -40,7 +40,7 @@ int main() {
     scanf("%s", nome_cidade1);
 
     printf("Digite o numero de população da cidade da primeira carta:\n");
-    scanf("%d", &populacao1);
+    scanf("%lu", &populacao1);
 
     printf("Digite a área da cidade em km2 da primeira carta:\n");
     scanf("%f", &area1);
@@ -64,7 +64,7 @@ int main() {
     scanf("%s", nome_cidade2);
 
     printf("Digite o numero de população da cidade da segunda carta:\n");
-    scanf("%d", &populacao2);
+    scanf("%lu", &populacao2);
 
     printf("Digite a área da cidade em km2 da segunda carta:\n");
     scanf("%f", &area2);
@@ -110,7 +110,7 @@ int main() {
     // Calculando o Super Poder
 
     long double poder1 = (double) populacao1 + area1 + pib1 + pontos_turisticos1 + pib_per_capita1 + (1 / densidade_populacional1);
-    long double poder2 = (double) populacao2+ area2 + pib2 + pontos_turisticos2 + pib_per_capita1 + (1 / densidade_populacional2) ;
+    long double poder2 = (double) populacao2+ area2 + pib2 + pontos_turisticos2 + pib_per_capita2 + (1 / densidade_populacional2) ;
 
     // Calculado Resultado do jogo
     int resultado = poder1 > poder2;
